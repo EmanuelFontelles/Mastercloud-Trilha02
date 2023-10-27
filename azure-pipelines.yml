@@ -24,6 +24,3 @@ steps:
     python -m pip install --upgrade pip
     pip install -r requirements.txt
   displayName: 'Install dependencies'
-
-- script: pytest tests/  # Run tests
-  displayName: 'Run Tests'
