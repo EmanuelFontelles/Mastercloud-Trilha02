@@ -10,8 +10,6 @@ pool:
   vmImage: ubuntu-latest
 strategy:
   matrix:
-    Python37:
-      python.version: '3.7'
     Python38:
       python.version: '3.8'
 
@@ -25,5 +23,7 @@ steps:
 - script: |
     python -m pip install --upgrade pip
     pip install -r requirements.txt
-    pytest /tests
   displayName: 'Install dependencies'
+
+- script: pytest tests/  # Run tests
+  displayName: 'Run Tests'
