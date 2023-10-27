@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhes do Carro</title>
+</head>
+<body>
+    <h1>{{ car.name }}</h1>
+    <p>Preço: {{ car.price }}</p>
+    <p>Características:</p>
+    <ul>
+        {% for feature in car.features %}
+            <li>{{ feature }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
